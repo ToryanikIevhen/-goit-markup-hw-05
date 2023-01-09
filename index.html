@@ -25,7 +25,7 @@
        <nav class="nav">
         <ul class="title-nav list ">
           <li class="text-nav ">
-            <a href="" class="link-nav link "> Студія </a>
+            <a href="./index.html" class="link-nav link corent "> Студія </a>
           </li>
           <li class="text-nav ">
             <a href="./portfolio.html" class="link-nav link"> Портфоліо </a>
@@ -64,7 +64,7 @@
           <div class="container">
           <h1 class="text-hiro">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ </h1>
       
-          <button type="button" class="button hiro-button">Замовити послугу</button> 
+          <button type="button" class="button hiro-button"data-modal-open >Замовити послугу</button> 
         </div>
         </section>
         <!-- --------------------WORK-------------------- -->
@@ -142,12 +142,27 @@
         <ul class="title-gallery list">
           <li class="item-gallery ">
             <img src="imeges/img.jpg" alt="чим ми займаємось" width="370" class="pikt-gallery" />
+              <div class="list-posihen">
+                <p class="desckript-posihen">
+                 ДЕСКТОПНІ ДОДАТКИ
+                </p>
+              </div>
           </li>
           <li class="item-gallery">
             <img src="imeges/img1,1.jpg" alt="додатки" width="370" class="pikt-gallery" />
+            <div class="list-posihen">
+              <p class="desckript-posihen">
+              МОБІЛЬНІ ДОДАТКИ
+              </p>
+            </div>
           </li>
           <li class="item-gallery">
             <img src="imeges/img1,2.jpg" alt="лизайн" width="370" class="pikt-gallery" />
+            <div class="list-posihen">
+              <p class="desckript-posihen">
+                ДИЗАЙНЕРСЬКІ ЗІШЕННЯ
+              </p>
+            </div>
           </li>
         </ul>
         </div>
@@ -525,5 +540,16 @@
       </address>
       </div>
     </footer>
+    <!-------modal--------->
+    <div class="backdrop is-hidden" data-modal >
+     <div class="modal">
+      <button class="modal-btn"data-modal-close >
+       <svg class="modal-icons" width="11" height="11">
+        <use href="./imeges/icons.svg#icon-madal"></use>
+        </svg> 
+      </button>
+     </div> 
+    </div>
+    <script src="./modal.js"></script>
   </body>
 </html>

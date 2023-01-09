@@ -71,6 +71,9 @@ section
 .link 
 {
   text-decoration: none;
+
+  transition-property: color , background-color ;
+  transition-duration: 250ms;
 }
 .link:hover,
 .link:focus {
@@ -104,6 +107,9 @@ section
 
   border-color: var(--background-team-color);
   border-radius: 4px;
+
+  transition-property: color , background-color ;
+  transition-duration: 250ms;
 }
 .port-button:hover,
 .port-button:focus {
@@ -172,8 +178,8 @@ color: var(--title-text-color);
 }
 
 .link-nav {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  position: relative;
+
   display: block;
 
   font-family: "Roboto", sans-serif;
@@ -184,6 +190,29 @@ color: var(--title-text-color);
   letter-spacing: 0.02em;
   color: var(--background-color);
 }
+/*.link-nav::after
+{
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) scale(0.3);
+
+  content:'';
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+margin-top: 28px;
+  background-color: var(--accent-color);
+  opacity: 0;
+
+}*/
+/*.link-nav:focus::after,
+.link-nav:hover::after
+{
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+}*/
 .current {
   color: var(--accent-color);
 }
@@ -191,6 +220,7 @@ color: var(--title-text-color);
   display: flex;
   margin-left: auto;
   gap: 30px;
+  max-height: 79px;
 }
 .title-nav-addres .title-addres + .title-addres {
   margin-left: 50px;
@@ -210,6 +240,7 @@ color: var(--title-text-color);
 {
   fill: var(--primary-text-color);
   margin-right: 10px;
+  
 }
 .link:hover .icon-nav,
 .link:focus .icon-nav
@@ -283,6 +314,9 @@ color: var(--title-text-color);
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.06em;
+
+  transition-property: color , background-color ;
+  transition-duration: 250ms;
 }
 
 .title-button {
@@ -353,7 +387,35 @@ color: var(--title-text-color);
   margin-bottom: 50px;
  
 }
+.item-gallery
+{
+  position:relative;
+}
 
+.list-posihen
+{
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+  display: flex;
+  min-height: 70px;
+  min-width: 370px;
+  justify-content: center;
+  align-items: center;
+}
+
+.desckript-posihen
+{
+   font-family: 'Roboto';
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 16px;
+   text-align: center;
+  letter-spacing: 0.03em;
+  color:var(--poster-text-color);
+}
 /*----------COMMAND--------------*/
 .command
  {
@@ -491,6 +553,23 @@ color: var(--title-text-color);
 
 
 /*-----------------------PORTFOLIO-STILE------------------*/
+.corent
+{
+  position: relative;
+  color: var(--accent-color);
+}
+.corent::after
+{
+  position: absolute;
+ 
+  content:'';
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  margin-top: 28px;
+  background-color: var(--accent-color);
+}
 
 
 .flex-portfolio {
@@ -525,6 +604,8 @@ letter-spacing: 0.06em;
 .portfolio-piktory
 {
   display: block;
+  transition-property: color , background-color ;
+  transition-duration: 250ms;
 }
 .portfolio-piktory:hover,
 .portfolio-piktory:focus
@@ -533,6 +614,60 @@ letter-spacing: 0.06em;
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
  0px 4px 4px rgba(0, 0, 0, 0.06),
  1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.main-list
+{
+  position: relative;
+  transition-property: color , background-color ;
+  transition-duration: 250ms;
+}
+/*.main-list:hover .modal
+{
+  display: block;
+  
+
+}*/
+/*----modal-port-----*/
+.tim-tumb
+{
+  position: relative;
+  overflow: hidden;
+}
+.modal-port
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(33, 150, 243, 0.9);
+  backdrop-filter: blu(1px);
+  
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  
+  padding: 0 25px;
+  transform: translateY(100%);
+  transition: transform 250ms;
+  user-select: none;
+  /*display: none;*/
+ 
+}
+.main-list:hover .modal-port
+{
+  transform: translate(0);
+}
+.desk-modal
+{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: var(--poster-text-color);
+
 }
 /* ----port-wrap-------------------------------footer style-------------------------*/
 
@@ -625,6 +760,9 @@ color: var(--poster-text-color);
     border-radius: 50%;
     color: var(--basic-white-color);
     background: rgba(255, 255, 255, 0.1); 
+
+    transition-property: color , background-color ;
+  transition-duration: 250ms; 
 }
 .icons-link:hover,
 .icons-link:focus
@@ -634,4 +772,91 @@ color: var(--poster-text-color);
 .icons-link
 {
   fill:var(--poster-text-color);
+}
+/*-------------modal---------*/
+.backdrop
+
+{
+position: fixed;
+top: 0;
+left: 0;
+
+width: 100%;
+height: 100%;
+
+border-radius: 4px;
+backdrop-filter: blur(2px);
+
+z-index: var(--background-team-color);
+border-radius: 4px;
+
+transition: opasity 250ms linear, vinibility 250ms linear;
+}
+.backdrop.is-hidden
+{
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal
+{
+position: absolute;
+top: 50%;
+left: 50%;
+background-color: var(--poster-text-color);
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 
+0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 4px;
+
+transform: translateX(-50%) translateY(-50%);
+transition: transform 250ms ,opacity 250ms ;
+width: 528px;
+min-height: 580px;
+
+}
+.backdrop.is-hidden .modal
+{
+  opacity: 0;
+  transform: translateX(-50%) translateY(-70%);
+}
+.modal-btn
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+position: absolute;
+top: 8px;
+right: 8px;
+width: 30px;
+height: 30px;
+background-color: #ffffff;
+border-radius: 50% ;
+border: 1px solid rgba(0, 0, 0, 0.1);
+
+padding: 0;
+}
+.modal-icons
+{
+  position: absolute;
+top: 10px;
+left: 10px;
+}
+/*----------animation--------*/
+@keyframes to-modal
+{
+  0%
+  {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  50%
+  {
+    opacity: 0.6;
+  }
+  100%
+  {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 }
