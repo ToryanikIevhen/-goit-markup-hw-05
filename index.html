@@ -497,8 +497,9 @@
       <address class="address-footer">
         <ul class="title-footer list">
           <li class="list-footer">
-            <a href="https://goo.gl/maps/6wECr7rhoGCpPzAa8" target="_blank" class="link-blank link" >
-              м. Київ, пр-т Лесі Українки, 26</a>
+            <a href="https://goo.gl/maps/6wECr7rhoGCpPzAa8" target="_blank" class="link-blank link" > 
+              м. Київ, пр-т Лесі Українки ,26
+            </a>
             
           </li>
           <li class="list-footer">
@@ -544,7 +545,11 @@
           <input type="email" class="foter-input" name="Email" placeholder="Email">
         </label>
       </form>
-      <button class="button footer-btn ">Підписатися</button>
+      <button type="submit" class="button footer-btn ">Підписатися
+        <svg class="foter-icon-btn " width="24" height="24">
+          <use href="./imeges/icons.svg#telg"></use>
+          </svg>
+      </button>
       </div>
       </address>
      
@@ -554,25 +559,40 @@
      <div class="modal">
       <p class="modal-peug">Залиште свої дані, ми вам передзвонимо</p>
       <button class="modal-btn "data-modal-close >
-       <svg class="modal-icons " width="11" height="11">
+       <svg class="modal-iconss " width="11" height="11">
         <use href="./imeges/icons.svg#icon-madal"></use>
         </svg> 
       </button>
       <form class="modal-form">
         <label for=""class="modal-lable">
-          <p>Ім"я </p>
-          <input type="text" class="modal-input" />
+          Ім'я <br>
+          <a class="modal-link link">
+          <input type="text" class="modal-input" autofocus />
+          <svg class="modal-mans icon-m" width="12" height="12">
+          <use href="./imeges/icons.svg#man"></use>
+          </svg>
+          </a>
         </label>
         <label for=""class="modal-lable">
-          <p>Телефон </p>
+          Телефон 
+          <a class="modal-link link">
           <input type="tel" class="modal-input">
+          <svg class="modal-phon icon-m" width="14" height="14">
+            <use href="./imeges/icons.svg#phon"></use>
+            </svg>
+            </a>
         </label>
           <label class="modal-lable">
-          <p>Пошта </p>
-          <input type="mail" class="modal-input">
+          Пошта 
+          <a class="modal-link link">
+          <input type="mail" class="modal-input" >
+          <svg class="modal-mail icon-m" width="16" height="12">
+            <use href="./imeges/icons.svg#mail"></use>
+          </svg>
+          </a>
         </label>
         <label for=""class="modal-lable">
-          <p>Коментар</p>
+          Коментар
           <textarea name="coment" row="5" class="modal-coment" placeholder="введіть текст"></textarea>
         </label>
         <label for=""class="modal-lable">
@@ -581,7 +601,7 @@
           <a class="modal-link link">Умови договору</a>
         </label>       
       </form>
-      <button class="button form-btn">Відправити</button>
+      <button  type="submit" class="button form-btn">Відправити</button>
      </div> 
     </div>
     <script src="./modal.js"></script>
